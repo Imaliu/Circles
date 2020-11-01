@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <parameter name="browser" value="chrome"></parameter>
+    <parameter name="url" value="https://www.lazada.sg/#"></parameter>
+    <parameter name="driverPath" value="/Users/Imali/Documents/Projects/Drivers/chromedriver"></parameter>
+    <test verbose="2" preserve-order="true" name="Test" parallel = "methods" thread-count = "2">
+        <classes>
+            <class name="TestCases.Regression">
+                <methods>
+                    <include name="ValidateUserCanNavigateToLeafCategoryPageAndSeeTheproductsListedInThePage"></include>
+                    <include name="ValidateIfChildCategoriesDisplayedExpected"></include>
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
